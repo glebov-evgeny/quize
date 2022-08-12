@@ -1,5 +1,6 @@
 html{
   font-size: 10px;
+  overflow: hidden;
 }
 body {
   font-family: 'Mont', sans-serif;
@@ -10,7 +11,7 @@ body {
   margin: 0;
   background: #fff;
   color: #000;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 a {
