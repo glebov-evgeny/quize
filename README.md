@@ -7,4 +7,4 @@ https://glebov-evgeny.github.io/time/
 
 main page:
 
-![Screenshot_8](https://user-images.githubusercontent.com/35433087/184450807-d858d201-dd6a-4a06-8379-7ad94a2c6b25.jpg)
+![scr](https://user-images.githubusercontent.com/35433087/184451116-525b21c8-3311-4e2c-b296-7fd3b9c67161.jpg)
