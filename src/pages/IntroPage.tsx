@@ -6,7 +6,6 @@ import { gsap } from 'gsap';
 export function IntroPage() {
     const title = useRef<HTMLParagraphElement>(null);
     const description = useRef<HTMLParagraphElement>(null);
-    const button = useRef<HTMLAnchorElement>(null);
     const decoration01 = useRef<HTMLDivElement>(null);
     const decoration02 = useRef<HTMLDivElement>(null);
     const decoration03 = useRef<HTMLDivElement>(null);
@@ -15,7 +14,6 @@ export function IntroPage() {
     useEffect(() => {
         gsap.to(title.current!,  1.5, {opacity: 1, delay: .5})
         gsap.to(description.current!,  1.5, {opacity: 1, delay: 1.5})
-        gsap.to(button.current!,.5, {opacity: 1, delay: 2.5})
         gsap.to(decoration01.current!,10, {
             scale: 1.2,
             repeat: -1,
@@ -43,7 +41,7 @@ export function IntroPage() {
                 <div className="intro__content">
                     <h1 className="intro__title" ref={title}>Нынче ветрено и&nbsp;волны с&nbsp;перехлестом</h1>
                     <p className="intro__description" ref={description}>Скоро осень, все изменится в&nbsp;округе</p>
-                    <Link className='button intro__button' ref={button} to='/login'>Продолжить</Link>
+                    <Link className='button intro__button' to='/login'>Продолжить</Link>
                 </div>
             </div>
             <div className="intro__decoration _01" ref={decoration01} />

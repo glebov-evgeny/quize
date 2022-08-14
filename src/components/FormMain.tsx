@@ -55,7 +55,7 @@ export function FormMain(props: FormProps){
         <form className="form" onSubmit={ handleRegistration }>
            <div className="form__box">
                <div className="form__item">
-                   <p className="form__item-name">Почта:</p>
+                   <p className="form__item-name">Почта:!</p>
                    <input
                        type="email"
                        name="email"
