@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/time/static/css/main.b713e073.css",
-    "main.js": "/time/static/js/main.19f6c52e.js",
+    "main.css": "/time/static/css/main.aeebba3f.css",
+    "main.js": "/time/static/js/main.bedff465.js",
     "static/media/Mont-BlackItalic.woff": "/time/static/media/Mont-BlackItalic.624553af455ecbb6eb35.woff",
     "static/media/Mont-HeavyItalic.woff": "/time/static/media/Mont-HeavyItalic.d7d4dfb3c88cbee29a76.woff",
     "static/media/Mont-ExtraLightItalic.woff": "/time/static/media/Mont-ExtraLightItalic.338c4e01c18e97fa37ca.woff",
@@ -35,12 +35,13 @@
     "static/media/Mont-Thin.woff2": "/time/static/media/Mont-Thin.66b1028769e9e7c059fb.woff2",
     "static/media/Mont-Black.woff2": "/time/static/media/Mont-Black.a986d10fb7e143afb64f.woff2",
     "static/media/icon-google.png": "/time/static/media/icon-google.578d01d5ac15336cd162.png",
+    "static/media/logout.png": "/time/static/media/logout.aaf25d897e470e70d99c.png",
     "index.html": "/time/index.html",
-    "main.b713e073.css.map": "/time/static/css/main.b713e073.css.map",
-    "main.19f6c52e.js.map": "/time/static/js/main.19f6c52e.js.map"
+    "main.aeebba3f.css.map": "/time/static/css/main.aeebba3f.css.map",
+    "main.bedff465.js.map": "/time/static/js/main.bedff465.js.map"
   },
   "entrypoints": [
-    "static/css/main.b713e073.css",
-    "static/js/main.19f6c52e.js"
+    "static/css/main.aeebba3f.css",
+    "static/js/main.bedff465.js"
   ]
 }
