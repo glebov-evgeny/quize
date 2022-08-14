@@ -4,6 +4,7 @@ https://glebov-evgeny.github.io/time/
 
 1) React + TypeScript
 2) GSAP (simple animation, animation on mousemove)
+3) Authentication / Registration with Firebase
 
 main page:
 
