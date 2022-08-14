@@ -97,6 +97,11 @@ export function FormMain(props: FormProps){
                     token: token,
                     id: user.uid
                 }));
+                if (typeof user.email === 'string') {
+                    localStorage.setItem('email', user.email);
+                }
+                localStorage.setItem('token', token);
+                localStorage.setItem('id', user.uid);
                 navigate('/about');
             })
             .catch((error) => {

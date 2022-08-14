@@ -5,11 +5,14 @@ import { auth } from '../api/firebase';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { useNavigate  } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import {setUser} from '../store/slices/userSlice';
+import {useAppDispatch} from '../hooks/redux-hooks';
 const iconGoogle = require('../assets/img/common/icon-google.png');
 
 export function LoginPage() {
 
     const provider = new GoogleAuthProvider();
+    const dispatch = useAppDispatch();
     const navigate = useNavigate();
     let timeout:any;
     const parallaxHandler = (event:any) => {
@@ -37,8 +40,19 @@ export function LoginPage() {
     const signInGoogle = () => {
         signInWithPopup(auth, provider)
             .then(({user}) => {
+                const response:any = user.toJSON();
+                const token = response.stsTokenManager.accessToken;
+                dispatch(setUser({
+                    email: user.email,
+                    token: token,
+                    id: user.uid
+                }));
+                if (typeof user.email === 'string') {
+                    localStorage.setItem('email', user.email);
+                }
+                localStorage.setItem('token', token);
+                localStorage.setItem('id', user.uid);
                 navigate('/about');
-                console.log(user)
             }).catch((error) => {
             console.error(error)
         });

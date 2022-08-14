@@ -7,9 +7,9 @@ interface IUser {
 }
 
 const initialState:IUser = {
-    email: null,
-    token: null,
-    id: null
+    email: localStorage.getItem('email') || null,
+    token:  localStorage.getItem('token') || null,
+    id: localStorage.getItem('id') || null
 }
 
 const userSlice = createSlice({
@@ -25,6 +25,7 @@ const userSlice = createSlice({
             state.email = null;
             state.token = null;
             state.id = null;
+            localStorage.clear()
         },
     }
 })
