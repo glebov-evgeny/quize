@@ -1,5 +1,6 @@
 .intro{
   position: relative;
+  overflow: hidden;
   padding: 8rem 0 2rem;
   min-height:100vh;
   background: #F9F0DF;
@@ -76,5 +77,9 @@
     max-width: 24rem;
     margin: 0 auto;
     opacity: 0;
+    &:hover{
+      opacity: 1;
+      color: #fff;
+    }
   }
 }

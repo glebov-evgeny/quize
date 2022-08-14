@@ -1,6 +1,5 @@
 html{
   font-size: 10px;
-  overflow: hidden;
 }
 body {
   font-family: 'Mont', sans-serif;
@@ -11,7 +10,7 @@ body {
   margin: 0;
   background: #fff;
   color: #000;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -340,7 +339,6 @@ select {
   width: .6rem;
 }
 
-
 .container {
   position: relative;
   padding: 0 1rem;
@@ -377,6 +375,7 @@ select {
   box-shadow: 0 1rem #ffdf00;
   transition: .3s;
   &:hover{
+    color: inherit;
     transform: translateY(1rem);
     box-shadow: 0 0 #ffdf00;
   }
