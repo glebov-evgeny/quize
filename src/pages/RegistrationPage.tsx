@@ -35,7 +35,7 @@ export function RegistrationPage() {
             <div className="container registration__container">
                 <div className="registration__content">
                     <h2 className="registration__title">Регистрация</h2>
-                    <FormMain btnTitle="Отправить"/>
+                    <FormMain formLogic="registration" btnTitle="Отправить"/>
                     <p className="registration__description">Если есть аккаунт:</p>
                     <Link className='registration__link' to='/login'>Вход</Link>
                 </div>

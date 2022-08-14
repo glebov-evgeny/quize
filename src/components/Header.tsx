@@ -1,7 +1,15 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../hooks/use-auth';
+import { removeUser } from '../store/slices/userSlice';
+import { useAppDispatch } from '../hooks/redux-hooks';
+
 const logo = require('../assets/img/header/home.png');
 
 export function Header(){
+    const dispatch = useAppDispatch();
+    const { isAuth } = useAuth();
+
+
     return (
         <header className='header'>
             <div className='container header__container'>
@@ -12,6 +20,12 @@ export function Header(){
                     {/*<Link className='header__nav-link' to='/'>Главная</Link>*/}
                     {/*<Link className='header__nav-link'  to='/info'>Информация</Link>*/}
                 </nav>
+                {isAuth ? (
+                    <button onClick={()=> dispatch(removeUser())}>выйти</button>
+                    ) : (
+                        <div>никогошеньки</div>
+                    )
+                }
             </div>
         </header>
     )

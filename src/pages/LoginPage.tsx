@@ -1,12 +1,16 @@
 import React, {useEffect, } from 'react';
 import {gsap, Power2} from 'gsap';
 import {FormMain} from '../components/FormMain';
+import { auth } from '../api/firebase';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { useNavigate  } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 const iconGoogle = require('../assets/img/common/icon-google.png');
 
 export function LoginPage() {
 
-
+    const provider = new GoogleAuthProvider();
+    const navigate = useNavigate();
     let timeout:any;
     const parallaxHandler = (event:any) => {
         if(timeout) clearTimeout(timeout);
@@ -30,6 +34,16 @@ export function LoginPage() {
         })
     }
 
+    const signInGoogle = () => {
+        signInWithPopup(auth, provider)
+            .then(({user}) => {
+                navigate('/about');
+                console.log(user)
+            }).catch((error) => {
+            console.error(error)
+        });
+    }
+
     useEffect(()=>{
 
     },[])
@@ -39,10 +53,10 @@ export function LoginPage() {
             <div className="container login__container">
                 <div className="login__content">
                     <h2 className="login__title">Вход</h2>
-                    <FormMain btnTitle="Отправить"/>
+                    <FormMain formLogic="login" btnTitle="Отправить"/>
                     <p className="login__description">Альтернативно:</p>
                     <div className="login__social">
-                        <div className="login__social-item">
+                        <div className="login__social-item" onClick={signInGoogle}>
                             <img className='login__social-item-pic' src={iconGoogle} alt='google account logo' />
                         </div>
                     </div>
