@@ -39,8 +39,8 @@ export function IntroPage() {
         <section className="intro">
             <div className="container intro__container">
                 <div className="intro__content">
-                    <h1 className="intro__title" ref={title}>Нынче ветрено и&nbsp;волны с&nbsp;перехлестом</h1>
-                    <p className="intro__description" ref={description}>Скоро осень, все изменится в&nbsp;округе</p>
+                    <h1 className="intro__title" ref={title}>Главная страница</h1>
+                    <p className="intro__description" ref={description}>короткий текст</p>
                     <Link className='button intro__button' to='/login'>Продолжить</Link>
                 </div>
             </div>
